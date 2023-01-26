@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+* {
+  font-family: "Unbounded", cursive;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+header {
+  background-color: #e9edc9;
+  padding: 30px;
+  margin-bottom: 10px;
+}
+body {
+  background-color: #d4a373;
+}
+
+h1 {
+  -webkit-animation: tracking-in-contract 1200ms
+    cubic-bezier(0.215, 0.61, 0.355, 1) 300ms both;
+  animation: tracking-in-contract 1200ms cubic-bezier(0.215, 0.61, 0.355, 1)
+    300ms both;
+}
+.contenedorProductos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+.containerCarrito {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 30px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* border: 3px solid rgb(134, 105, 182); */
+}
+#contadorCarrito {
+  height: 50px;
+}
+
+.bi-cart {
+  height: 200px;
+  font-size: 30px;
+}
+
+#contadorCarrito {
+  font-size: 30px;
+}
+
+.iconCarrito:hover {
+  background-color: #d4a373;
+  color: aliceblue;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: dotted;
+  background-size: cover;
+}
+
+#contenedorPproductos {
+  border: none;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+.producto {
+  background-color: #faedcd;
+  margin: 10px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  margin-top: auto;
+}
+.productoImagen {
+  max-width: 100%;
+  border-radius: 1rem;
+  width: 300px;
+}
+
+button {
+  width: 100px;
+  background-color: #d4a373;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+button:hover {
+  background-color: #997654;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.productoPrecio {
+  margin-top: 10px;
+  margin-left: 25%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 600px;
+  width: 700px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px 2px #666;
+  background-color: #212529;
+  color: whitesmoke;
+}
+.tituloModal {
+  display: flex;
+}
+.botonModalCerrar {
+  background-color: red;
+  display: flex;
+  margin-left: 370px;
+  text-align: center;
+  justify-content: center;
+}
