@@ -20,8 +20,10 @@
     <div class="wrapper">
       <header>
         <h1>Ecommerce bebidas The Boat</h1>
+        <p id="myWeather"> </p>
         <div class="containerCarrito">
           <div class="iconCarrito">
+            
             <i class="bi bi-cart"></i>
             <span id="contadorCarrito">0</span>
           </div>
@@ -41,31 +43,75 @@
           </div>
         </div>
       </main>
+
       <div class="modal" id="modalCart">
-        <div class="tituloModal">
-          
-        <h2>Tus productos</h2><button class="botonModalCerrar">X</button>
-        
+              <div class="tituloModal">
+                      <h2>Tus productos</h2>
+                      <button class="botonModalCerrar">X</button>
+              </div>
+
+        <div class="modalProductoContainer" id="modalProductoContainer">
+
         </div>
-        <div>
-          <img src="./img/6packbrahma.jpg" class="productoImagen" alt="" />
-            <div>
-            <h3 class="productoTitulo">texto</h3>
-            <p class="prdoductoPrecio">100$</p>
-            
-            </div> 
-        </div>
+
+           
+                    <!-- <div class="modalProductoElegido"> -->
+
+<!-- 
+                              <img src="./img/6packbrahma.jpg" class="productoImagen" alt="" />
+                                <div class="descripcionProductoModal">
+                                    <h3 class="productoTitulo">texto</h3>
+                                    <p>cantidad: 1</p>
+                                    <p class="prdoductoPrecio">100$</p>
+                                    <div class="botonTrashModal">
+                                      <i class="bi bi-trash3"></i>
+                                    </div>
+                                </div> -->
+
+                        <!-- </div> -->
+                          
+              <!-- </div> -->
+                        <!-- <div class="modalProductoElegido">
+                              <img src="./img/6packbrahma.jpg" class="productoImagen" alt="" />
+                                <div class="descripcionProductoModal">
+                                    <h3 class="productoTitulo">texto</h3>
+                                    <p class="descripcionCantidad">cantidad: 1 </p>
+                                    <p class="prdoductoPrecio">100$</p>
+                                  <div class="botonTrashModal">                                       
+                                    <i class="bi bi-trash3"></i>
+                                  </div> -->
+                               
+                <div>
+                  <div class="totalCompra">
+                        <p class="precioTotal" id="precioTotal"> Precio total: </p>
+                  </div>
+                  <div class="botonesModal">
+                          <button type="submit" class="accept">aceptar</button>
+                          <button class="seguirComprandoBtn">Seguir Comprando</button>
+                  </div>
+                </div>
+                     
+         </div> 
+                       
+ 
           
         </div>
       </div>
     </div>
-    <!-- <footer>footer</footer> -->
+    <footer>
+      <p class="textoFooter">by nachoTheBoat⛵</p>
+    </footer>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js
+"></script>
+     <script src="carrito.js"></script>
+     <script src="modal.js"></script>
     <script src="stock.js"></script>
-    <script src="carrito.js"></script>
+   <script src="weather.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

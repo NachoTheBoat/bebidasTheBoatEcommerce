@@ -88,12 +88,12 @@ h1 {
   background-size: cover;
 }
 
-#contenedorPproductos {
+/* #contenedorProductos {
   border: none;
   background-color: black;
   display: flex;
   align-items: center;
-}
+} */
 .producto {
   background-color: #faedcd;
   margin: 10px;
@@ -136,15 +136,33 @@ button:hover {
   left: 0;
   right: 0;
   margin: auto;
-  height: 600px;
+  height: max-content;
   width: 700px;
   border-radius: 5px;
   box-shadow: 0px 0px 6px 2px #666;
   background-color: #212529;
   color: whitesmoke;
 }
+.modalProductoContainer {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.modalProductoElegido {
+  height: fit-content;
+  display: flex;
+  padding: 10px;
+  border: 1px ridge lightblue;
+}
+.modalProductoElegido img {
+  width: 100px;
+  margin-right: auto;
+  margin-left: 5px;
+}
+
 .tituloModal {
   display: flex;
+  align-items: baseline;
 }
 .botonModalCerrar {
   background-color: red;
@@ -152,4 +170,63 @@ button:hover {
   margin-left: 370px;
   text-align: center;
   justify-content: center;
+  margin-bottom: 15px;
+}
+.descripcionProductoModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.botonTrashModal i:hover {
+  cursor: pointer;
+  border: 1px gray;
+  padding: 4px;
+
+  /* padding-top: 10px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px; */
+
+  background-color: #666;
+  color: rgb(255, 228, 228);
+  border-radius: 50%;
+
+  text-align: center;
+}
+.totalCompra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+.botonesModal {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.seguirComprandoBtn {
+  width: min-content;
+}
+
+.accept {
+  background-color: lightseagreen;
+}
+.accept:hover {
+  background-color: lightblue;
+  color: #e3ee93;
+}
+footer {
+  background-color: #606c38;
+  padding: 10px;
+
+  margin-top: 50px;
+}
+.textoFooter {
+  font-size: x-small;
+  color: #b9b1b1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

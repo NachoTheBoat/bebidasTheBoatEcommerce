@@ -1,10 +1,12 @@
 const contenedorProductos = document.querySelector(".contenedorProductos");
 const modalCarrito = document.getElementById("modalCart");
 const contenedorCarrito = document.getElementById("containerCarrito");
-const carrito = [];
+let carrito = [];
+
 const contadorCart = document.getElementById("contadorCarrito");
 let botonesAgregar = document.querySelectorAll(".productoAgregar");
 
+//funcion para renderizar productos en el dom
 function cargarProductos() {
   productos.forEach((producto) => {
     let div = document.createElement("div");
@@ -20,11 +22,6 @@ function cargarProductos() {
       </div>
     `;
     contenedorProductos.append(div);
-
-    // const boton = document.getElementById(`agregar${producto.id}`);
-    // boton.addEventListener("click", () => {
-    //   agregarAlCarrito(producto.id);
-    // });
   });
 }
 
@@ -39,6 +36,7 @@ function actualizarBotones() {
 }
 actualizarBotones();
 
+// Agregar productos seleccionados
 function agregarAlCarrito(e) {
   Toastify({
     text: "producto agregado al carrito!🥳🍹",
@@ -62,8 +60,14 @@ function agregarAlCarrito(e) {
     carrito.push(productoAgregado);
   }
   actualizarContador();
-
+  actualizarTotal();
+  actualizarCarrito();
   localStorage.setItem("miCarrito", JSON.stringify(carrito));
+
+  console.log(carrito);
+  carrito = JSON.parse(localStorage.getItem("miCarrito"));
+
+  //prueba
 }
 
 function actualizarContador() {
@@ -71,6 +75,6 @@ function actualizarContador() {
     (acc, producto) => acc + producto.cantidad,
     0
   );
-  console.log(numberCart);
+
   contadorCart.innerHTML = numberCart;
 }
