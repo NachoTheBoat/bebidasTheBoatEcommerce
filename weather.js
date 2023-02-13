@@ -35,7 +35,7 @@ const getUserLocation = () => {
         console.log(data.current.temp);
         if (data.current.temp >= 30) {
           emoji = misEmojis[0];
-        } else if ((data.current, temp < 29)) {
+        } else if (data.current.temp < 29) {
           emoji = misEmojis[2];
         }
 
